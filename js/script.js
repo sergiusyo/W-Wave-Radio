@@ -12,7 +12,7 @@ document.querySelector('.header-bottom__playing-now').addEventListener('click', 
 
 
 /*кнопка play-podcasts*/
-const buttons = document.querySelectorAll('.podcasts-svg__button')
+const buttons = document.querySelectorAll('.podcasts__svg-button')
 
 for (let button of buttons) {
   button.addEventListener("click", e => {
@@ -26,15 +26,15 @@ for (let button of buttons) {
 
 
 /*кнопка Еще подкасты*/
-document.querySelector('.podcasts-more__button').addEventListener('click', function () {
+document.querySelector('.podcasts__more-button').addEventListener('click', function () {
   var elements = document.getElementsByClassName('podcasts-item');
   for (var i = 0; i < elements.length; i++) {
     elements[i].classList.toggle("podcasts-item--active");
   }
 });
 
-document.querySelector('.podcasts-more__button').addEventListener('click', function () {
-  document.querySelector('.podcasts-more__button').classList.toggle('podcasts-more__button--passive')
+document.querySelector('.podcasts__more-button').addEventListener('click', function () {
+  document.querySelector('.podcasts__more-button').classList.toggle('podcasts__more-button--passive')
 });
 
 
@@ -44,7 +44,7 @@ const element = document.querySelector('select');
 const choices = new Choices(element, {
   searchEnabled: false,
   itemSelectText: '',
-  placeholderValue: 'Дмитрий Гутенберг',
+  shouldSort: false,
 });
 
 
@@ -130,8 +130,8 @@ breakpoints: {
 
 /*бургер-меню*/
 document.querySelector('#burger').addEventListener('click', function () {
-  document.querySelector('.burger').classList.toggle('right-block__burger_active')
-  document.querySelector('.header-middle__nav').classList.toggle('header-middle__nav_active')
+  document.querySelector('.burger').classList.toggle('right__block-burger_active')
+  document.querySelector('.header__middle-nav').classList.toggle('header__middle-nav_active')
   document.querySelector('.header').classList.toggle('header_active')
   document.querySelector('.header-bottom__nav').classList.toggle('header-bottom__nav_active')
 });
